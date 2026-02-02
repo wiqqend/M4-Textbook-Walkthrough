@@ -10,6 +10,9 @@
       Filename: js02.js
  */
 
+// setup the foirm when the page loads
+window.addEventListener("load", setupForm);
+
 // set the form's default values
 document.getElementById("photoNum").value = 1;
 document.getElementById("photoHrs").value = 2;
