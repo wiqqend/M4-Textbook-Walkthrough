@@ -27,3 +27,14 @@ function setupForm() {
       document.getElementById("photoRights").checked = false;
       document.getElementById("photoDist").value = 0;
 }
+
+function getEstimate() {
+      let totalCost = 0;
+      let photographers = document.getElementById("photoNum").value;
+      let hour = document.getElementById("photoHrs").value; 
+      let distance = document.getElementById("photoDist").value;
+
+      totalCost += photographers * hours * EMP_COST;
+
+      totalCost += photographers * distance * TRAVEL_COST;
+}
