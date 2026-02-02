@@ -26,15 +26,25 @@ function setupForm() {
       document.getElementById("makeBook").checked = false;
       document.getElementById("photoRights").checked = false;
       document.getElementById("photoDist").value = 0;
+      getEstimate();
 }
 
 function getEstimate() {
       let totalCost = 0;
       let photographers = document.getElementById("photoNum").value;
-      let hour = document.getElementById("photoHrs").value; 
+      let hours = document.getElementById("photoHrs").value; 
       let distance = document.getElementById("photoDist").value;
+      let buyBook = document.getElementById("makeBook").checked;
+      let buyRights = document.getElementById("photoRights").checked;
 
       totalCost += photographers * hours * EMP_COST;
 
       totalCost += photographers * distance * TRAVEL_COST;
+
+      totalCost += buyBook ? BOOK_COST : 0;
+
+      totalCost += buyRights ? REPRO_COST : 0;
+      document.getElementById("estimate").innerHTML = "$" + totalCost;
 }
+
+
