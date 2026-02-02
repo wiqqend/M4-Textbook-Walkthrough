@@ -10,6 +10,12 @@
       Filename: js02.js
  */
 
+// declare global constats for the applicaiton
+const EMP_COST =  100;
+const BOOK_COST = 350;
+const REPRO_COST =  1250;
+const TRAVEL_COST =   2;
+
 // setup the foirm when the page loads
 window.addEventListener("load", setupForm);
 
